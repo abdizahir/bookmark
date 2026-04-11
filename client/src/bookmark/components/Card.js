@@ -78,7 +78,7 @@ export default function Card() {
   const archiveIcon = mode === "light" ? archiveLigth : archive;
 
   const handleVisitBookmark = async (id, url) => {
-   window.open(`${url}`, '_blank', 'noopener,noreferrer');
+   window.open(`https://${url}`, '_blank', 'noopener,noreferrer');
     visitAction({ id });
     dispatch(toggleOpenActionDropdown(id));
   };
