@@ -1,5 +1,8 @@
 import dotenv from "dotenv";
 dotenv.config();
+import path from "path";
+import { fileURLToPath } from "url";
+import { dirname } from "path";
 import mongoose from "mongoose";
 import express from "express";
 import cors from "cors";
@@ -10,6 +13,9 @@ import bookmarkRoutes from "./routes/bookmark.js";
 import { setServers } from "node:dns";
 setServers(["1.1.1.1", "8.8.8.8"]);
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 const mongoUri = process.env.MONGODB_URI;
 const port = process.env.PORT || 5000;
 const isProd = process.env.NODE_ENV === "production";
@@ -19,7 +25,10 @@ const corsMode = String(process.env.CORS_MODE ?? "")
 
 const app = express();
 
+
 app.use(express.json());
+
+app.use(express.static(path.join(__dirname, '../client/build')));
 
 app.use(
   cors({
