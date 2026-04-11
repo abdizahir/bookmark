@@ -9,7 +9,6 @@ const Home = () => {
       <Header />
       <Sort text={'All bookmarks'} />
       <Card />
-      {/* <ArchiveCard /> */}
     </>
   );
 };

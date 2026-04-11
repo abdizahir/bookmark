@@ -9,7 +9,6 @@ import Home from "./bookmark/pages/Home";
 import Archive from "./bookmark/pages/Archive";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
-// import RequireAuth from "./user/components/RequireAuth";
 
 const router = createBrowserRouter([
   {

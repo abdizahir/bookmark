@@ -42,7 +42,6 @@ export const markBookmarkVisited = async (req, res) => {
 
 export const getBookmarks = async (req, res) => {
   try {
-    // If query params repeat, Express can give an array
     const rawSort = req.query.sort;
     const sort = Array.isArray(rawSort) ? rawSort[0] : rawSort;
 

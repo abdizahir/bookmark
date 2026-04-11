@@ -60,7 +60,6 @@ export const login = async (req, res, next) => {
 
 export const logout = async (req, res) => {
   try {
-    // res.clearCookie("access_token", getAccessCookieOptions(req));
     return res.json({ msg: "logged out successfuly" });
   } catch (err) {
     console.log(err.message);

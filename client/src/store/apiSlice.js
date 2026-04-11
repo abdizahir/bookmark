@@ -6,7 +6,6 @@ export const api = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({
     baseUrl: `${API_URL}/api/`,
-    // credentials: "include",
    prepareHeaders: (headers, { getState }) => {
     const token = getState().auth.token;
     if (token) headers.set("authorization", `Bearer ${token}`);
@@ -37,12 +36,6 @@ export const api = createApi({
       }),
       invalidatesTags: ["Auth"],
     }),
-    // getMe: builder.query({
-    //   query: () => "auth/me",
-    //   keepUnusedDataFor: 0,
-    //   refetchOnMountOrArgChange: true,
-    //   providesTags: ["Auth"],
-    // }),
     resetUser: builder.mutation({
       query: (formData) => ({
         url: "auth/reset",

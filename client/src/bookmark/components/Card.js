@@ -250,7 +250,7 @@ export default function Card() {
           />
 
           <article id="info" className="flex-1 overflow-hidden">
-            {/* CHANGED: prevent top-of-text from getting clipped when overflow-hidden + max height */}
+            
             <p
               className={`text-preset3 my-5 max-h-24 overflow-hidden pt-0.5 leading-normal break-words ${
                 mode === "light" ? "text-neutral-800" : "text-neutral-dark-100"

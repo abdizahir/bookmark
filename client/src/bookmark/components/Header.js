@@ -245,11 +245,6 @@ export default function Header() {
           </button>
         </article>
       </div>
-      {/* <hr
-        className={`-mx-4 md:-mx-8 mt-4 border-0 border-t ${
-          mode === "light" ? "border-[#E9EAEB]" : "border-neutral-dark-400"
-        }`}
-      /> */}
     </section>
   );
 }
