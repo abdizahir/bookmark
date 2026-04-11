@@ -78,10 +78,15 @@ export default function Card() {
   const archiveIcon = mode === "light" ? archiveLigth : archive;
 
   const handleVisitBookmark = async (id, url) => {
-   window.open(`https://${url}`, '_blank', 'noopener,noreferrer');
+    let validUrl = url;
+    if (!/^https?:\/\//i.test(url)) {
+      validUrl = "https://" + url;
+    }
+    window.open(validUrl, "_blank", "noopener,noreferrer");
     visitAction({ id });
     dispatch(toggleOpenActionDropdown(id));
   };
+  
   const handleCopyUrlBookmark = async (url) => {
     try {
       await navigator.clipboard.writeText(url);
@@ -250,7 +255,6 @@ export default function Card() {
           />
 
           <article id="info" className="flex-1 overflow-hidden">
-            
             <p
               className={`text-preset3 my-5 max-h-24 overflow-hidden pt-0.5 leading-normal break-words ${
                 mode === "light" ? "text-neutral-800" : "text-neutral-dark-100"
