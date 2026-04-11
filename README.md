@@ -35,7 +35,7 @@ Users can:
 ## 📸 Screenshots
 
 ### Main Interface
-![Desk Screenshot](./screenshots/Desktop.jpg)
+![Desk Screenshot](./client/screenshots/Desktop.jpg)
 
 ## Getting Started
 
