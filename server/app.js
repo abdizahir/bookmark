@@ -34,7 +34,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:3000",
-      "https://mern-bookmark-five.vercel.app"
+      "https://bookmark-five-dusky.vercel.app"
     ],
     methods: ["GET", "POST", "PATCH", "DELETE", "OPTIONS"],
     allowedHeaders: [
